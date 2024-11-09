@@ -1,78 +1,93 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
   margin: 0;
   padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+header {
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+}
+.search-bar {
+  text-align: center;
+  margin: 20px 0;
+}
+.search-bar input {
+  padding: 10px;
+  width: 60%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.suggestions {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.suggestion-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  width: 60%;
+  max-width: 500px;
+  text-align: left;
+  margin: 2px 0;
+  border-radius: 3px;
+}
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+#resultSection {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #00796B;
-  color: #FFF;
-  width: 100%;
-}
-
-.search-bar {
-  position: relative;
-  margin: 20px;
-}
-
-#searchInput {
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  border-radius: 8px;
+  overflow: hidden;
   padding: 10px;
-  width: 300px;
-  border: 1px solid #00796B;
+  transition: box-shadow 0.3s;
 }
-
-.suggestions {
-  position: absolute;
-  background-color: white;
-  border: 1px solid #ddd;
-  width: 300px;
-  max-height: 200px;
-  overflow-y: auto;
-  z-index: 1000;
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-
-.suggestions div {
-  padding: 8px;
-  cursor: pointer;
+.card img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
 }
-
-.suggestions div:hover {
-  background-color: #f0f0f0;
+.card-content {
+  padding: 10px;
+  text-align: center;
 }
-
-#resultSection {
-  width: 80%;
-  margin-top: 20px;
+.card-content h3 {
+  color: #4CAF50;
+  font-size: 1.5em;
 }
-
-#results .card {
-  display: flex;
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
-  align-items: center;
+.card-content p {
+  margin: 8px 0;
+  color: #555;
 }
-
-#results .card img {
-  width: 150px;
-  height: 100px;
-  margin-right: 15px;
-  object-fit: cover;
+.card-content a {
+  display: inline-block;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
 }
-
-#results .card h3 {
-  margin: 0;
+.card-content a:hover {
+  color: #333;
 }
-
-#results .card p {
-  margin: 5px 0;
-}
-
-.location-icon, .history-icon {
-  font-size: 1.2em;
-  color: #00796B;
-}
+      
